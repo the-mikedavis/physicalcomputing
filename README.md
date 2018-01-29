@@ -21,10 +21,10 @@ default example project `blink`.)
     $ tree
         blink/
         |---- src/
-        |     `---- blink.ino
+        |     `---- sketch.ino
         `---- lib/
 
-Now you can edit the blink program in `blink.ino`.
+Now you can edit the blink program in `sketch.ino`.
 
 When done, compile the program with `ino build`. Upload with `ino upload`. You
 may need `sudo` privileges. Ino will find the port for you (on Linux, the
