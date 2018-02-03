@@ -1,4 +1,5 @@
-#define BNT 2
+#define BTN 2
+
 int switch_state = 0;
 
 void setup() {
