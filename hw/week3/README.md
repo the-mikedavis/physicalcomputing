@@ -118,3 +118,60 @@ execution. Each call sends an empty message that executes the callback.
 
 [![asciicast](https://asciinema.org/a/23VJfDLOZO68bpT5URMwLhqfB.png)](https://asciinema.org/a/23VJfDLOZO68bpT5URMwLhqfB)
 
+#### ROS breakdown
+
+Quite a few things were running in that video. What was that???
+
+1. `roscore`, the top pane. Roscore is the main ROS process that handles
+communication between nodes and execution.
+2. `rosrun`, the left middle pane. Rosrun allows you to run scripts that
+interact with the master process one by one. A larger structure, called
+`roslaunch`, allows you to launch multiple processes in a structured way
+that you might use in a production environment. For a small project like
+this, that's like strapping a rocket to a wheelbarrow.
+  - This rosrun runs the python script that allows the `/dev/ttyACM0`
+  device (the arduino) to talk to ros, and vice versa.
+3. `rospub`, the bottom pane. Publish to a topic with a given message.
+This publish is empty, which we specified in the code.
+4. The middle right pane. I'll discuss that below.
+
+#### Using the ROS library with Ino
+
+Using the Arduino IDE with ROS is easy peasy, and described
+[here](http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup).
+You may even be able to install with with the IDE's install tool these days.
+
+Ino, though, doesn't know what the IDE is doing, so you have to link in
+the library through other means. In the end, we want our tree to look like
+this:
+
+    $ tree
+        blink/
+        |---- src/
+        |     `---- sketch.ino
+        `---- lib/
+              `---- ros-lib
+
+Copying over the entire directory is clearly not the right move, so what
+is? Symlinking. You can create a symbolic link that stores a relative
+reference to another directory or file with the `ln` command line tool.
+
+    $ cd path/to/blink/
+    $ cd lib/
+    $ ln -s ~/Arduino/libraries/ros-lib .
+
+N.B.: you have to have installed the `ros-lib` library previously.
+
+The symbolic link just points at that directory, so no copying is done.
+You can enter the directory and read and write to the files just as
+usual.
+
+Now that we having everything, how do we build it? Use `ino`.
+
+    $ ino build
+    # inspect the output for errors
+    # the output is stored in blink/.build/
+    $ ino upload
+    
+And that's exactly what just happened in that video. Now each time we
+publish to the topic, the LED changes state.
