@@ -11,7 +11,7 @@ causing the top to be filled.
 It turns out it's quite easy to make a digital version with Arduino. Simply
 throw together some LEDs and a digital thermometer and here it is!
 
-[![Love-O-Meter demonstration](http://img.youtube.com/vi/WKcrVmwVa7w/0.jpg)](http://www.youtube.com/watch?v=WKcrVmwVa7w "Love-O-Meter")
+[![Love-O-Meter demonstration](http://img.youtube.com/vi/dNLfd-jiRQ0/0.jpg)](http://www.youtube.com/watch?v=dNLfd-jiRQ0 "Love-O-Meter")
 
 As the temperature sensor warms up, the LEDs light up in a row. When I take my
 hand off, the sensor cools and the LEDs turn off.
