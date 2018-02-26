@@ -7,12 +7,12 @@
 
 void setup()
 {
-  pinmode(ENA, OUTPUT);
-  pinmode(ENB, OUTPUT);
-  pinmode(IN1, OUTPUT);
-  pinmode(IN2, OUTPUT);
-  pinmode(IN3, OUTPUT);
-  pinmode(IN4, OUTPUT);
+  pinMode(ENA, OUTPUT);
+  pinMode(ENB, OUTPUT);
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+  pinMode(IN3, OUTPUT);
+  pinMode(IN4, OUTPUT);
 }
 
 void demoOne() {
