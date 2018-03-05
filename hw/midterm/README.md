@@ -20,6 +20,10 @@ makers to grab ahold of it and do some pretty cool things.
 Check out [this project](http://hex-machina.com/hw/mindbullets), where a maker
 used a MindWave to control a NERF gun.
 
+For basic testing and control, I intend to hook up a motor or two to some
+potentiometers and buttons to show what kind of precision I have in the
+control.
+
 ## Buliding it
 
 Building the arm will require some intermediate wiring skills, mostly involving
