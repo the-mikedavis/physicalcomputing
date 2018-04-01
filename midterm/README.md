@@ -8,23 +8,11 @@ moving around. I also want to create an interface to control the arm from a
 computer and possibly, with human input. Imagine that a human could control the
 arm with their arm. This could be pretty fun.
 
-![Mindwave](https://cdn.shopify.com/s/files/1/0031/6882/t/12/assets/MindWave-headset.jpg?13121457431276696418)
-
-The Neurosky MindWave is an EEG headset. It essentially reads brain activity.
-Another (perhaps optimistic) route for controlling the arm may be to use EEG.
-If the readings are consistent enough, it may be possible to create an
-interface to control the robot through thought. In the past few years,
-Neurosky has open sourced their code for the MindWave, making it possible for
-makers to grab ahold of it and do some pretty cool things.
-
-Check out [this project](http://hex-machina.com/hw/mindbullets), where a maker
-used a MindWave to control a NERF gun.
-
 For basic testing and control, I intend to hook up a motor or two to some
 potentiometers and buttons to show what kind of precision I have in the
 control.
 
-## Buliding it
+## Building it
 
 Building the arm will require some intermediate wiring skills, mostly involving
 using stepper motors with motor sheilds, as well as some 3D printing skills.
@@ -48,14 +36,26 @@ Here's a list of the parts (most of which are already printed).
 - [x] Support
 - [x] Toothed-ring
 - [x] Vertical-axis-gear
-- [ ] Arm-1-upper
-- [ ] Base (reprint with water-soluble method)
-- [ ] Grasper-1
-- [ ] Grasper-2
-- [ ] Grasper-body
-- [ ] Grasper-holder
-- [ ] Ring (possibly reprint)
+- [x] Arm-1-upper
+- [x] Base (reprint with water-soluble method)
+- [x] Grasper-1
+- [x] Grasper-2
+- [x] Grasper-body
+- [x] Grasper-holder
+- [x] Ring (possibly reprint)
 
 Those are just the 3D printable parts. Then the builder needs some electronic
 parts like Nema 17 motors. To see the other parts, check out the
 [manual](http://www.zortrax.com/downloads/ROBOTIC_MANUAL.pdf).
+
+After the printing, putting it together is pretty simple. The manual covers
+most of it. The hard part is the motors. The manual isn't very specific. It
+says "Nema 17"'s, which covers a rather broad range. I used
+[these](https://www.amazon.com/dp/B0716S32G4/ref=sspa_dk_detail_0?psc=1&pd_rd_i=B0716S32G4&pd_rd_wg=XS8DR&pd_rd_r=K9WZXZAZBAC3TSGRY72M&pd_rd_w=a5LAO). It
+seems like every motor I tried, however, had the same problem. Wiring them
+up in parallel caused a power problem. The motors would be unresponsive or
+not strong enough. Other times they would shudder. It was only one or two
+of the three motors at a time, however. I've still yet to solve this problem.
+
+To see how I wired individual Nema's and put the controller together, check
+out `3dmodelAssignment.md` and `nema-17-drok-and-arduino.md`.
