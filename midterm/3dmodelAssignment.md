@@ -71,3 +71,11 @@ wires for analog inputs (A0, A1, A2).
 
 If I were to do it again, I'd like to create a snappable or glueable backing
 that covers up the wires.
+
+![With Design](https://i.imgur.com/6c8PFD3.jpg)
+
+Here it is with the design on the front. It seems intuitive to me which knobs
+go to which motors. Bottom to the bottom, middle to the middle, etc..
+
+If I had a redo, I'd print it with the design printed in to the plastic.
+All it would take is a bit more CAD work.
