@@ -1,0 +1,3 @@
+[submodule "angrybot"]
+	path = angrybot
+	url = git@github.com:the-mikedavis/angrybot.git
